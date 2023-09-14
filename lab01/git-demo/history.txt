@@ -1,0 +1,619 @@
+bash: /c/Users/IlyaL/.profile: is a directory
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ vi song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ vi song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git add .
+warning: in the working copy of 'song.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   song.txt
+
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git commit -m "add first two lines in the song"
+[main 174158e] add first two lines in the song
+ 1 file changed, 2 insertions(+)
+ create mode 100644 song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git log
+commit 174158ecb9ba1543b519242d97c436cb0ebc5887 (HEAD -> main)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 13:55:40 2023 +0300
+
+    add first two lines in the song
+
+commit 41e2237222c327eac62da74817371ff4de3700cb (origin/main, origin/HEAD)
+Author: IlyaLetich <137784964+IlyaLetich@users.noreply.github.com>
+Date:   Wed Sep 6 13:41:17 2023 +0300
+
+    Initial commit
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git pull
+Already up to date.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:IlyaLetich/git-demo.git
+   41e2237..174158e  main -> main
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 729 bytes | 81.00 KiB/s, done.
+From github.com:IlyaLetich/git-demo
+   174158e..a85112d  main       -> origin/main
+Updating 174158e..a85112d
+Fast-forward
+ song.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ touch .gitignore
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ ls
+README.md  song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ vi .gitignore
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git branch feature
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ vi song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git status
+On branch feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   song.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git commit -m "commit01"
+[feature 4600161] commit01
+ 2 files changed, 6 insertions(+)
+ create mode 100644 .gitignore
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ vi song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git add .
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git commit -m "commit02"
+[feature 3033d0b] commit02
+ 1 file changed, 1 insertion(+)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git merge main
+Already up to date.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git merge feature
+Updating a85112d..3033d0b
+Fast-forward
+ .gitignore | 4 ++++
+ song.txt   | 3 +++
+ 2 files changed, 7 insertions(+)
+ create mode 100644 .gitignore
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git log
+commit 3033d0b8716ae6128b439713633c2636220e73d2 (HEAD -> main, feature)
+commit 3033d0b8716ae6128b439713633c2636220e73d2 (HEAD -> main, feature)
+commit 3033d0b8716ae6128b439713633c2636220e73d2 (HEAD -> main, feature)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:41 2023 +0300
+
+    commit02
+
+commit 4600161a6f0d3e557525904bd45d18426f29a771
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:22 2023 +0300
+
+    commit01
+
+commit a85112d359ef09feac8f9329eb31af787ba89fb1 (origin/main, origin/HEAD)
+Author: IlyaLetich <137784964+IlyaLetich@users.noreply.github.com>
+Date:   Wed Sep 6 13:57:09 2023 +0300
+
+    add two more lines to the song
+
+commit 174158ecb9ba1543b519242d97c436cb0ebc5887
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 13:55:40 2023 +0300
+
+    add first two lines in the song
+
+:
+commit 3033d0b8716ae6128b439713633c2636220e73d2 (HEAD -> main, feature)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:41 2023 +0300
+
+    commit02
+
+commit 4600161a6f0d3e557525904bd45d18426f29a771
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:22 2023 +0300
+
+    commit01
+
+commit a85112d359ef09feac8f9329eb31af787ba89fb1 (origin/main, origin/HEAD)
+Author: IlyaLetich <137784964+IlyaLetich@users.noreply.github.com>
+Date:   Wed Sep 6 13:57:09 2023 +0300
+
+    add two more lines to the song
+
+commit 174158ecb9ba1543b519242d97c436cb0ebc5887
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 13:55:40 2023 +0300
+
+    add first two lines in the song
+
+commit 41e2237222c327eac62da74817371ff4de3700cb
+Author: IlyaLetich <137784964+IlyaLetich@users.noreply.github.com>
+Date:   Wed Sep 6 13:41:17 2023 +0300
+
+    Initial commit
+(END)
+commit 3033d0b8716ae6128b439713633c2636220e73d2 (HEAD -> main, feature)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:41 2023 +0300
+
+    commit02
+
+commit 4600161a6f0d3e557525904bd45d18426f29a771
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:15:22 2023 +0300
+
+    commit01
+
+commit a85112d359ef09feac8f9329eb31af787ba89fb1 (origin/main, origin/HEAD)
+Author: IlyaLetich <137784964+IlyaLetich@users.noreply.github.com>
+Date:   Wed Sep 6 13:57:09 2023 +0300
+
+    add two more lines to the song
+
+commit 174158ecb9ba1543b519242d97c436cb0ebc5887
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 13:55:40 2023 +0300
+
+    add first two lines in the song
+
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ touch arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ vi arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git add .
+warning: in the working copy of 'arrows.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git commit -m "create arrows.txt"
+[feature 661ffd5] create arrows.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ touch arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ vi arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git commit -m "create main arrows"
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arrows.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git add .
+warning: in the working copy of 'arrows.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git commit -m "create main arrows"
+[main f54e6f6] create main arrows
+ 1 file changed, 2 insertions(+)
+ create mode 100644 arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git merge feature
+Auto-merging arrows.txt
+CONFLICT (add/add): Merge conflict in arrows.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main|MERGING)
+$ vi arrows.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main|MERGING)
+$ git add .
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main|MERGING)
+$ git commit -m "merge conflict"
+[main 85a8a0d] merge conflict
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git branche storm
+git: 'branche' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git brenche storm
+git: 'brenche' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git checkout storm
+error: pathspec 'storm' did not match any file(s) known to git
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git branch storm
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git checkout storm
+Switched to branch 'storm'
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ touch storm.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ vi s
+song.txt   storm.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ vi storm.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git commit -m "storm01f"
+On branch storm
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        storm.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git add .
+warning: in the working copy of 'storm.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git commit -m "storm01f"
+[storm 45e81d2] storm01f
+ 1 file changed, 2 insertions(+)
+ create mode 100644 storm.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ vi storm.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git add .
+warning: in the working copy of 'storm.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git commit -m "storm02f"
+[storm daab2d2] storm02f
+ 1 file changed, 3 insertions(+)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ touch pursuit.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ vi pursuit.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git add .
+warning: in the working copy of 'pursuit.txt', LF will be replaced by CRLF the next time Git touches it
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git commit -m "create pursuit.txt"
+[main c074fd1] create pursuit.txt
+ 1 file changed, 4 insertions(+)
+ create mode 100644 pursuit.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git tag session1
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git log
+commit c074fd18c88782118e96cd3f427513f8fe2508c1 (HEAD -> main, tag: session1)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:30:14 2023 +0300
+
+    create pursuit.txt
+
+commit 85a8a0d272f5ed6f56f3bab3239da9171a2c32a5
+Merge: f54e6f6 661ffd5
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:23:32 2023 +0300
+
+    merge conflict
+
+commit f54e6f61ef11694122d661e719033782ba32197d
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:21:43 2023 +0300
+
+    create main arrows
+
+commit 661ffd5ac1f076befde9df11d58e067329e6e8dd (feature)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:20:30 2023 +0300
+
+    create arrows.txt
+
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git checkout storm
+Switched to branch 'storm'
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git rebase main
+Successfully rebased and updated refs/heads/storm.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git log
+commit 6abada4b5cb67f7c2926df74efdcc04df0aeac49 (HEAD -> storm)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:28:35 2023 +0300
+
+    storm02f
+
+commit 133c1e60f27af493c65fb0d3d019392e4502b71a
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:28:11 2023 +0300
+
+    storm01f
+
+commit c074fd18c88782118e96cd3f427513f8fe2508c1 (tag: session1, main)
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:30:14 2023 +0300
+
+    create pursuit.txt
+
+commit 85a8a0d272f5ed6f56f3bab3239da9171a2c32a5
+Merge: f54e6f6 661ffd5
+Author: Ilya Letich <IlyaLetich@gmail.com>
+Date:   Wed Sep 6 14:23:32 2023 +0300
+
+    merge conflict
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git status
+On branch storm
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (storm)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git push
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 1.64 KiB | 841.00 KiB/s, done.
+Total 19 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+To github.com:IlyaLetich/git-demo.git
+   a85112d..c074fd1  main -> main
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote -v
+origin  git@github.com:IlyaLetich/git-demo.git (fetch)
+origin  git@github.com:IlyaLetich/git-demo.git (push)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote remove origin
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote -v
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote add origin git@github.com:IlyaLetich/git-demo-remote.git
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote -v
+origin  git@github.com:IlyaLetich/git-demo-remote.git (fetch)
+origin  git@github.com:IlyaLetich/git-demo-remote.git (push)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git merge feature
+Already up to date.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git push --set-upstream origin main
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (28/28), 3.18 KiB | 1.06 MiB/s, done.
+Total 28 (delta 8), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To github.com:IlyaLetich/git-demo-remote.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote remove origin
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote add origin git@github.com:IlyaLetich/git-demo.git
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git remote -v
+origin  git@github.com:IlyaLetich/git-demo.git (fetch)
+origin  git@github.com:IlyaLetich/git-demo.git (push)
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ git reflog
+c074fd1 (HEAD -> main, tag: session1) HEAD@{0}: checkout: moving from storm to main
+6abada4 (storm) HEAD@{1}: rebase (finish): returning to refs/heads/storm
+6abada4 (storm) HEAD@{2}: rebase (pick): storm02f
+133c1e6 HEAD@{3}: rebase (pick): storm01f
+c074fd1 (HEAD -> main, tag: session1) HEAD@{4}: rebase (start): checkout main
+daab2d2 HEAD@{5}: checkout: moving from main to storm
+c074fd1 (HEAD -> main, tag: session1) HEAD@{6}: commit: create pursuit.txt
+85a8a0d HEAD@{7}: checkout: moving from storm to main
+daab2d2 HEAD@{8}: commit: storm02f
+45e81d2 HEAD@{9}: commit: storm01f
+85a8a0d HEAD@{10}: checkout: moving from main to storm
+85a8a0d HEAD@{11}: commit (merge): merge conflict
+f54e6f6 HEAD@{12}: commit: create main arrows
+3033d0b HEAD@{13}: checkout: moving from feature to main
+661ffd5 (feature) HEAD@{14}: commit: create arrows.txt
+3033d0b HEAD@{15}: checkout: moving from main to feature
+3033d0b HEAD@{16}: merge feature: Fast-forward
+a85112d HEAD@{17}: checkout: moving from feature to main
+3033d0b HEAD@{18}: commit: commit02
+4600161 HEAD@{19}: commit: commit01
+a85112d HEAD@{20}: checkout: moving from main to feature
+a85112d HEAD@{21}: pull: Fast-forward
+174158e HEAD@{22}: commit: add first two lines in the song
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ cat ~/.bash_history > history_backup
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$ ls
+README.md  arrows.txt  history_backup  pursuit.txt  song.txt
+
+IlyaL@IlyaLetich MINGW64 ~/Desktop/ТПО/Labs/Lab01/git-demo (main)
+$
