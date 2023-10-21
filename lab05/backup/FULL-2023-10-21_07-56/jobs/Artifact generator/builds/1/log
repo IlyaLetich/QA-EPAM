@@ -1,0 +1,9 @@
+Started by user [8mha:////4F0XTXi/hXJJC7tFBq5SbTjdiTwz8l6FSmVlCwVLruT1AAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgYB/dLi1CL9zJzKxJzUkszkDABDr6q+xQAAAA==[0mIlya Letich
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\Artifact generator
+[Artifact generator] $ cmd /c call C:\windows\TEMP\jenkins14668604338983087728.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Artifact generator>ECHO hello  1>file.txt 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Artifact generator>exit 0 
+Finished: SUCCESS

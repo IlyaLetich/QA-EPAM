@@ -1,0 +1,10 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.clearcase.ClearCaseInstallation_-DescriptorImpl plugin="clearcase@1.6.8">
+  <installations class="hudson.plugins.clearcase.ClearCaseInstallation-array">
+    <hudson.plugins.clearcase.ClearCaseInstallation>
+      <name>ClearCase</name>
+      <home></home>
+      <properties/>
+    </hudson.plugins.clearcase.ClearCaseInstallation>
+  </installations>
+</hudson.plugins.clearcase.ClearCaseInstallation_-DescriptorImpl>

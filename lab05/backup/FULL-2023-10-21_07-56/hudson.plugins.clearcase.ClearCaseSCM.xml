@@ -1,0 +1,12 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.clearcase.ClearCaseSCM_-ClearCaseScmDescriptor plugin="clearcase@1.6.8">
+  <changeLogMergeTimeWindow>5</changeLogMergeTimeWindow>
+  <defaultViewName>Jenkins_${USER_NAME}_${NODE_NAME}_${JOB_NAME}${DASH_WORKSPACE_NUMBER}</defaultViewName>
+  <defaultViewPath>view</defaultViewPath>
+  <defaultViewStorage class="hudson.plugins.clearcase.viewstorage.ServerViewStorage">
+    <assignedLabelString></assignedLabelString>
+    <server>-auto</server>
+  </defaultViewStorage>
+  <defaultWinDynStorageDir>\\${HOST}\views\dynamic</defaultWinDynStorageDir>
+  <endViewDelay>0</endViewDelay>
+</hudson.plugins.clearcase.ClearCaseSCM_-ClearCaseScmDescriptor>
