@@ -17,16 +17,8 @@ public class Card {
         this.status = "unblocked";
     }
 
-    public void withdrawMoney(float sum){
-        this.balance -= sum;
-    }
-
     public float getBalance(){
         return balance;
-    }
-
-    public String getStatement(float sum){
-        return "FIO:" +  FIO + "#BALANCE:" + balance;
     }
 
     public void depositMoney(float sum){
