@@ -49,6 +49,8 @@ namespace MyWebSiteCaseTest
             IWebElement bodyChange = driver.FindElement(By.TagName("body"));
             string backgroundColorChange = body.GetCssValue("background-color");
 
+            Thread.Sleep(5000);
+
             Assert.That(backgroundColor.Equals(backgroundColorChange));
         }
     }
