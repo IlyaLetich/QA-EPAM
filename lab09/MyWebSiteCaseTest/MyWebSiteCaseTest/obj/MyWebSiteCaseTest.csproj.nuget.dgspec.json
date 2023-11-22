@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\QA-EPAM\\Lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj": {}
+    "D:\\QA-EPAM\\lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj": {}
   },
   "projects": {
-    "D:\\QA-EPAM\\Lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj": {
+    "D:\\QA-EPAM\\lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QA-EPAM\\Lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj",
+        "projectUniqueName": "D:\\QA-EPAM\\lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj",
         "projectName": "MyWebSiteCaseTest",
-        "projectPath": "D:\\QA-EPAM\\Lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj",
+        "projectPath": "D:\\QA-EPAM\\lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\MyWebSiteCaseTest.csproj",
         "packagesPath": "C:\\Users\\IlyaL\\.nuget\\packages\\",
-        "outputPath": "D:\\QA-EPAM\\Lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\obj\\",
+        "outputPath": "D:\\QA-EPAM\\lab09\\MyWebSiteCaseTest\\MyWebSiteCaseTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IlyaL\\AppData\\Roaming\\NuGet\\NuGet.Config",

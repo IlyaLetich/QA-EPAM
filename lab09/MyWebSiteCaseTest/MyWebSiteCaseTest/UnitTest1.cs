@@ -35,7 +35,7 @@ namespace MyWebSiteCaseTest
         }
 
         [Test]
-        public void TestAddItemToBasket()
+        public void SwitchThemesTests()
         {
             driver.Navigate().GoToUrl(baseURL);
 
