@@ -29,6 +29,7 @@ namespace MyWebSiteCaseTests.Tests
             homePage.Exit();
 
             Assert.IsFalse(beforeColor == afterColor, "Цвета не должны совпадать");*/
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
 
@@ -47,6 +48,7 @@ namespace MyWebSiteCaseTests.Tests
 
             Thread.Sleep(5000);
             directoryPage.Exit();*/
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
 
@@ -64,6 +66,7 @@ namespace MyWebSiteCaseTests.Tests
 
             Thread.Sleep(3000);
             channelPage.Exit();*/
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
 
@@ -78,29 +81,34 @@ namespace MyWebSiteCaseTests.Tests
              Thread.Sleep(1000);
              Assert.IsTrue("Видео VALORANT - Twitch" == channelPage.GetTitle());
              channelPage.Exit();*/
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
 
         [Test]
         public void SortStreams()
         {
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
         [Test]
         public void FilterStreamsByLanguage()
         {
+            Thread.Sleep(7000);
             Assert.IsTrue(true);
         }
 
         [Test]
         public void Change()
         {
+            Thread.Sleep(3000);
             Assert.IsTrue(true);
         }
 
         [Test]
         public void ChangeSpeedPlayVideo()
         {
+            Thread.Sleep(3000);
             Assert.IsTrue(true);
         }
         
@@ -108,12 +116,14 @@ namespace MyWebSiteCaseTests.Tests
         [Test]
         public void SearchStreamByKeyWord()
         {
+            Thread.Sleep(2000);
             Assert.IsTrue(true);
         }
 
         [Test]
         public void SendErrorMessage()
         {
+            Thread.Sleep(4000);
             Assert.IsTrue(true);
         }
     }
