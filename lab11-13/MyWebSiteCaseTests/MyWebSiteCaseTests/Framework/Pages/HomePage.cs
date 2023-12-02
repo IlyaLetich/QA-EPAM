@@ -1,4 +1,5 @@
-﻿using MyWebSiteCaseTests.Pages;
+﻿using MyWebSiteCaseTests.Framework.Utils;
+using MyWebSiteCaseTests.Pages;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -19,17 +20,17 @@ namespace MyWebSiteCaseTests.Framework.Pages
         }
         public void ClickProfileButton()
         {
-            ClickButton(By.XPath("//*[@id=\"root\"]/div/div[2]/nav/div/div[3]/div[3]/div/div[2]/div/div[1]/button/button"));
+            ClickButton(By.XPath("//*[@id=\"profile-button\"]"));
         }
 
         public void ClickSwitchThemesButton()
         {
-            ClickButton(By.XPath("/html/body/div[5]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div/div[2]/div/div/div[2]"));
+            ClickButton(By.XPath("//*[@id=\"theme-button\"]"));
         }
 
         public void Login(string login, string password)
         {
-            ClickButton(By.XPath("//*[@id=\"root\"]/div/div[2]/nav/div/div[3]/div[3]/div/div[1]/div[1]/button"));
+            ClickButton(By.XPath("//*[@id=\"login\"]"));
             Thread.Sleep(1000);
             driver.FindElement(By.XPath("//*[@id=\"login-username\"]")).SendKeys(login);
             driver.FindElement(By.XPath("//*[@id=\"password-input\"]")).SendKeys(password);
@@ -45,6 +46,7 @@ namespace MyWebSiteCaseTests.Framework.Pages
 
         public override void GoToPage()
         {
+            Logger.Log(url + "oppen");
             driver.Navigate().GoToUrl(url);
         }
     }

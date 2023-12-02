@@ -1,4 +1,5 @@
-﻿using MyWebSiteCaseTests.Pages;
+﻿using MyWebSiteCaseTests.Framework.Utils;
+using MyWebSiteCaseTests.Pages;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,24 @@ namespace MyWebSiteCaseTests.Framework.Pages
             driver.FindElement(locator).Click();
         }
 
-        public void SetMusicCategory()
+        public void SetMusicCategory(string category)
         {
-            IWebElement elem = driver.FindElement(By.XPath("//*[@id=\"browse-root-main-content\"]/div[2]/div/div[3]/div/a"));
-            elem.Click();
+             ClickButton(By.XPath("//*[@id=\"category\"]"));
+        }
+        public void OpenLanguagesFilter()
+        {
+            ClickButton(By.XPath("//*[@id=\"languages-filter-sort\"]"));
+        }
+        public void WriteSearch()
+        {
+            IWebElement webElement = driver.FindElement(By.XPath("//*[@id=\"search\"]"));
+            webElement.SendKeys("геминг");
+            webElement.Click();
+        }
+
+        public void SetLanguageItem(string language)
+        {
+            ClickButton(By.XPath($"//*[@id=\"language-{language}\"]"));
         }
 
         public string GetCurrentCategory()
@@ -29,9 +44,27 @@ namespace MyWebSiteCaseTests.Framework.Pages
             return driver.Title.Trim();
         }
 
+        public bool CheckStreamsFilterByLanguages()
+        {
+            string nameFirstStreamLanguage = driver.FindElement(By.XPath("//*[@id=\"container\"]/div[1]")).Text;
+            if (nameFirstStreamLanguage == "Русский")
+                return true;
+            else return false;
+        }
+        public bool CheckStreamsFilterByWord()
+        {
+            string nameFirstStream = driver.FindElement(By.XPath("//*[@id=\"container\"]/div[1]/span")).Text;
+            if (nameFirstStream == "гейминг")
+                return true;
+            else return false;
+        }
+
         public override void GoToPage()
         {
+            Logger.Log(url + "oppen");
             driver.Navigate().GoToUrl(url);
         }
+
+
     }
 }
