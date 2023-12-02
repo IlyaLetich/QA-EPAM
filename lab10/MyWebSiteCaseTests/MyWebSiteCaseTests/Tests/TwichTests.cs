@@ -10,7 +10,7 @@ namespace MyWebSiteCaseTests.Tests
         [Test]
         public void SwitchThemesTests()
         {
-            TwichPage twichPage = new TwichPage(new ChromeDriver());
+            HomePage twichPage = new HomePage(new ChromeDriver());
 
             twichPage.GoToPage();
 
@@ -29,11 +29,11 @@ namespace MyWebSiteCaseTests.Tests
         [Test]
         public void ViewMusicCategory()
         {
-            TwichPage twichPage = new TwichPage(new ChromeDriver());
+            HomePage twichPage = new HomePage(new ChromeDriver());
 
             twichPage.GoToPage();
 
-            //twichPage.Login("IlyaLetich", "********");
+            twichPage.Login("IlyaLetich", "********");
 
             twichPage.ClickButton(By.XPath("//*[@id=\"root\"]/div/div[2]/nav/div/div[1]/div[2]/div/div/div[1]/a"));
             Thread.Sleep(1000);
@@ -42,7 +42,7 @@ namespace MyWebSiteCaseTests.Tests
 
             Assert.IsTrue(twichPage.GetCurrentCategory() == "Music", "Не правильная категория");
 
-            Thread.Sleep(5000);
+            Thread.Sleep(500000);
             twichPage.Exit();
         }
     }
